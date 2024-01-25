@@ -1,0 +1,9 @@
+version: "3"
+services:
+  uptime-kuma:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - .env
